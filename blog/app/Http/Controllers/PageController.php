@@ -4,10 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Movie;
+
 class PageController extends Controller
 {
-    public function index(){
-        //restituire la view 'home'
-        return view('home');
+    public function index()
+    {
+        ddd( Movie::all());
+        return view('movies.index', compact('movies'));
+        
     }
 }
