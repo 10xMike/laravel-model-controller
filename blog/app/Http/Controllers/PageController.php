@@ -10,8 +10,12 @@ class PageController extends Controller
 {
     public function index()
     {
-        ddd( Movie::all());
+        $movie = Movie::all();
+
+        /* foreach ($movies as $movie) {
+            echo $movie->title . "<br>";
+        } */
+
         return view('movies.index', compact('movies'));
-        
     }
 }
