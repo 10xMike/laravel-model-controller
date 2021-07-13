@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Movie;
 
-class PageController extends Controller
+class MovieController extends Controller
 {
     public function index()
     {
-        $movie = Movie::all();
-
+        $movies = Movie::all();
+        
         /* foreach ($movies as $movie) {
             echo $movie->title . "<br>";
         } */
